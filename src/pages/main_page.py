@@ -59,7 +59,7 @@ image_path = Image.open("dataframe.png")
 def bar_plot():
     fig = px.bar(grouped_df, x="Crime category", y="counts", 
                  color="Crime year", barmode="group", color_discrete_sequence=["yellow", "purple", "blue"])
-    fig.update_layout(title= "total number of crime per year and category", yaxis_title='Number of crimes', paper_bgcolor = "#282B30", font_color="white")
+    fig.update_layout(title= "Total number of crime per year and category", yaxis_title='Number of crimes', paper_bgcolor = "#282B30", font_color="white")
     fig.update_traces(marker_line_width=1, 
                   marker_line_color='black',
                   selector=dict(type='bar'))
@@ -77,7 +77,7 @@ def bubble_plot():
     )
 
     fig.update_traces(marker=dict(line=dict(width=0.5, color='white')))  
-    fig.update_xaxes(title='Number of Crimes Committed', tickangle=30, tickfont=dict(color='white'))
+    fig.update_xaxes(title='Type of crime committed', tickangle=30, tickfont=dict(color='white'))
     fig.update_yaxes(title='Average investigation duration (in months)', tickfont=dict(color='white'))
 
     # Rimuovo la legenda originale
@@ -100,7 +100,7 @@ def bubble_plot():
 layout = html.Div([
     html.H1("Introduction", style={'textAlign': 'center', 'fontSize': 25, "color":"white"}),
     dbc.Row([
-        html.H3("The aim of our study is to conduct an analysis of the dataset pertaining to crimes committed in London city recorded by the London Police from March 2020 to December 2022 (March 2020 being the earliest available data), with a focus on examining the temporal trends and patterns of crime types, their frequency and the associated case resolution times. \n This study is motivated by the need to gain a better understanding of the nature and evolution of criminal activity in London",
+        html.H3("The aim of our study is to conduct an analysis of the dataset pertaining to crimes committed in London city recorded by the London Police from March 2020 to December 2022 (March 2020 being the earliest available data), with a focus on examining the temporal trends and patterns of crime types, their frequency and the associated case resolution times. This study is motivated by the need to gain a better understanding of the nature and evolution of criminal activity in London",
                 style={'textAlign': 'justified', 'fontSize': 15, "color":"white"})
         ]),
     html.Br(),
@@ -125,7 +125,7 @@ layout = html.Div([
     html.Br(),
     html.Div([
         dbc.Row([
-            html.H3("Bar plot",
+            html.H3("Grouped bar plot",
                     style={'textAlign': 'center', 'fontSize': 20, "color":"white"})
             ]),
         dbc.Row([
@@ -135,6 +135,8 @@ layout = html.Div([
         dbc.Row([
             dcc.Graph(figure = bar_plot())
             ]),
+        html.Br(),
+        html.Hr(),
         html.Br(),
         dbc.Row([
             html.H3("Bubble Plot",
