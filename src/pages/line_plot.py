@@ -18,7 +18,7 @@ from dash import callback
 
 dash.register_page(__name__, path="/line_plot", name = "Discover city of London crimes")
 
-df = pd.read_csv("C:/Users/leona/LUISS/data_visualization/final_dataset.csv", header = 0)
+df = pd.read_csv("final_dataset.csv", header = 0)
 
 df.drop_duplicates(inplace = True)
 
