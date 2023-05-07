@@ -24,7 +24,7 @@ from PIL import Image
 
 dash.register_page(__name__, path="/", name = "Home page")
 
-df = pd.read_csv("C:/Users/leona/LUISS/data_visualization/final_dataset.csv", header = 0)
+df = pd.read_csv("final_dataset.csv", header = 0)
 
 df.drop_duplicates(inplace = True)
 
@@ -54,7 +54,7 @@ df_bubble = df2.groupby('Crime category').agg(
 df_bubble['crime_percentage'] = df_bubble['num_crimes'] / total_crimes * 100
 df_bubble = df_bubble.sort_values(by='avg_duration')
 
-image_path = Image.open("C:/Users/leona/LUISS/data_visualization/dataframe.png")
+image_path = Image.open("dataframe.png")
 
 def bar_plot():
     fig = px.bar(grouped_df, x="Crime category", y="counts", 
