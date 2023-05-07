@@ -16,7 +16,7 @@ import dash_bootstrap_components as dbc
 from dash import callback
 
 
-dash.register_page(__name__, path="/line_plot", name = "Discover city of London crimes")
+dash.register_page(__name__, path="/line_plot", name = "Crimes over the years")
 
 df = pd.read_csv("final_dataset.csv", header = 0)
 
