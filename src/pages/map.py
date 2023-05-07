@@ -18,7 +18,7 @@ from dash import callback
 
 dash.register_page(__name__, path="/map", name = "city of London map")
 
-df = pd.read_csv("C:/Users/leona/LUISS/data_visualization/final_dataset.csv", header = 0)
+df = pd.read_csv("final_dataset.csv", header = 0)
 
 df.drop_duplicates(inplace = True)
 
