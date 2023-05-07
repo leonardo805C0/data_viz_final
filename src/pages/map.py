@@ -16,7 +16,7 @@ import dash_bootstrap_components as dbc
 from dash import callback
 
 
-dash.register_page(__name__, path="/map", name = "city of London map")
+dash.register_page(__name__, path="/map", name = "Crime density map")
 
 df = pd.read_csv("final_dataset.csv", header = 0)
 
