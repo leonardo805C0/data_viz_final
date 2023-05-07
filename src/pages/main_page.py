@@ -77,7 +77,7 @@ def bubble_plot():
     )
 
     fig.update_traces(marker=dict(line=dict(width=0.5, color='white')))  
-    fig.update_xaxes(title='Type of crime committed', tickangle=30, tickfont=dict(color='white'))
+    fig.update_xaxes(title='Crime category', tickangle=30, tickfont=dict(color='white'))
     fig.update_yaxes(title='Average investigation duration (in months)', tickfont=dict(color='white'))
 
     # Rimuovo la legenda originale
