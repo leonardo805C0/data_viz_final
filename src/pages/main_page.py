@@ -119,10 +119,11 @@ layout = html.Div([
                     style={'textAlign': 'justified', 'fontSize': 15, "color":"white"})
             ], width = 5),
         dbc.Col([
-            html.Img(src=image_path, style={'height': '70%', 'width': '100%'})
+            html.Img(src=image_path, style={'height': '90%', 'width': '100%'})
             ], width = 7)
         ]),
     html.Br(),
+    html.Hr(),
     html.Div([
         dbc.Row([
             html.H3("Grouped bar plot",
